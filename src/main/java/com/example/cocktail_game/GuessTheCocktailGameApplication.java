@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.web.client.RestTemplate;
 
-@ComponentScan(basePackages = "com.example.cocktail_game")
+//@ComponentScan(basePackages = "com.example.cocktail_game")
 @SpringBootApplication
 public class GuessTheCocktailGameApplication {
 
