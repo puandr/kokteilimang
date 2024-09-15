@@ -78,7 +78,7 @@ public class CocktailService {
         while (retryCount > 0) {
             cocktail = getRandomCocktail();
 
-            if (cocktail == null || cocktail.getName() == null) {
+            if (cocktail == null || cocktail.getName() == null || cocktail.getName().equalsIgnoreCase("skip")) {
                 retryCount--;
                 continue;
             }

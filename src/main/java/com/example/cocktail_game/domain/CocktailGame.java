@@ -14,7 +14,6 @@ import java.util.*;
 public class CocktailGame {
     private final CocktailService cocktailService;
     private final HighScoreRepository highScoreRepository;
-//    private final Scanner scanner;
     private Scanner scanner;
     private int highScore;
     private final int maxAttempts = 5;
@@ -30,7 +29,6 @@ public class CocktailGame {
         this.cocktailService = cocktailService;
         this.highScoreRepository = highScoreRepository;
         this.scanner = new Scanner(System.in);
-//        this.scanner = scanner;
         this.highScore = highScoreRepository.getHighScore();
     }
 
@@ -96,9 +94,14 @@ public class CocktailGame {
 
         while (currentAttempt <= maxAttempts) {
             //TODO remove answer
-            System.out.println("Cocktail: " + cocktailName);
+//            System.out.println("Cocktail: " + cocktailName);
             printRoundIntro(hiddenName, currentAttempt);
             String playerGuess = askForPlayerGuess().toLowerCase();
+
+            if (playerGuess.equals("skip")) {
+                System.out.println("You've chosen to skip this round.");
+                return; // Exit the playRound() method to start a new round
+            }
 
             if (playerGuess.equals(cocktailName)) {
                 //TODO get rid of magic number or ...
