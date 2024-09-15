@@ -304,6 +304,7 @@ public class CocktailGame {
         System.out.println("If answered correctly the game continues with a new random cocktail and score is increased by number of attempts left.");
         System.out.println("If your guess is wrong, some letter(s) and one hint will be revealed.");
         System.out.println("Your answers are case insensitive.");
+        System.out.println("You can skip the round if you enter skip as a guess.");
         System.out.println("********** ********** ********** ********** ********** ********** ********** ********** ********** ********** **********");
         System.out.println();
     }
