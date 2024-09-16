@@ -63,7 +63,7 @@ public class CocktailService {
             String ingredientKey = "strIngredient" + i;
             JsonNode ingredientNode = drinksNode.get(ingredientKey);
 
-            if (ingredientNode != null && !ingredientNode.asText().isEmpty()) {
+            if (ingredientNode != null && !ingredientNode.asText().isEmpty() && !ingredientNode.asText().equals("null")) {
                 ingredients.add(ingredientNode.asText());
             }
         }
